@@ -16,7 +16,7 @@ namespace AdventOfCode.Utilities
             Input = new InputReader(day, year);
         }
         
-        protected abstract string SolvePartOne();
-        protected abstract string SolvePartTwo();
+        public abstract string SolvePartOne();
+        public abstract string SolvePartTwo();
     }
 }
