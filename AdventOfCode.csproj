@@ -51,6 +51,7 @@
         <Compile Include="src\2021\Day5.cs" />
         <Compile Include="src\Program.cs" />
         <Compile Include="src\Utilities\BaseDay.cs" />
+        <Compile Include="src\Utilities\c.cs" />
         <Compile Include="src\Utilities\InputReader.cs" />
     </ItemGroup>
     <ItemGroup>
