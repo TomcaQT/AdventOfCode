@@ -5,7 +5,7 @@ namespace AdventOfCode._2021
     public class Day3 : BaseDay
     {
 
-        public Day3() : base(3, 2020)
+        public Day3() : base(3, 2021)
         {
             
         }
