@@ -26,6 +26,21 @@ namespace AdventOfCode.Utilities
             return input; 
         }
 
+        public List<List<T>> Read2D<T>()
+        {
+            List<List<T>> input = new List<List<T>>();
+            var lines = Read();
+            foreach (var line in lines)
+            {
+                List<T> row = new List<T>();
+                foreach (var s in line.Split())
+                    row.Add((T)Convert.ChangeType(s, typeof(T)));
+                input.Add(row);
+            }
+
+            return input;
+        }
+        
         public List<List<T>> Read2D<T>(char[] sep, StringSplitOptions options = StringSplitOptions.None)
         {
             List<List<T>> input = new List<List<T>>();
