@@ -25,6 +25,36 @@ namespace AdventOfCode.Utilities
                 input.Add((T)Convert.ChangeType(line, typeof(T)));
             return input; 
         }
+        
+        public List<T> Read1D<T>(char sep)
+        {
+            List<T> input = new List<T>();
+            var lines = Read();
+            foreach (var line in lines)
+                foreach (var x in line.Split(sep))
+                    input.Add((T)Convert.ChangeType(x, typeof(T)));
+            return input; 
+        }
+        
+        public List<T> Read1D<T>(char[] sep, StringSplitOptions options = StringSplitOptions.None)
+        {
+            List<T> input = new List<T>();
+            var lines = Read();
+            foreach (var line in lines)
+            foreach (var x in line.Split(sep,options))
+                input.Add((T)Convert.ChangeType(x, typeof(T)));
+            return input; 
+        }
+        
+        public List<T> Read1D<T>(string[] sep, StringSplitOptions options = StringSplitOptions.None)
+        {
+            List<T> input = new List<T>();
+            var lines = Read();
+            foreach (var line in lines)
+            foreach (var x in line.Split(sep,options))
+                input.Add((T)Convert.ChangeType(x, typeof(T)));
+            return input; 
+        }
 
         public List<List<T>> Read2D<T>()
         {
