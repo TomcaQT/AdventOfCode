@@ -13,48 +13,23 @@ namespace AdventOfCode._2021
             
         }
         
-        //1 - 2
-        //
+ 
         private HashSet<int> lens = new HashSet<int>() {2, 4, 3, 7};
         public override string SolvePartOne()
         {
             int output = 0;
-            //int avg = (int)Math.Round(input.Average());
             var input = Input.Read1D<string>('|');
             for (int i = 1; i < input.Count; i+=2)
             {
-    
-            
-            
                 var line = input[i].Split(new char[]{' '}, StringSplitOptions.RemoveEmptyEntries);
                 foreach (var s in line)
-                {
-                    
                     if (lens.Contains(s.Length))
-                    {
-                        
-                       //Console.WriteLine(s);
                         output++;
-                    }
-                }
             }
             
             return $"{output}";
         }
 
-        public Dictionary<string, int> seg = new Dictionary<string, int>()
-        {
-            {"acedgfb", 8},
-            {"cdfbe", 5},
-            {"gcdfa", 2},
-            {"fbcad", 3},
-            {"dab", 7},
-            {"cefabd", 9},
-            {"cdfgeb", 6},
-            {"eafb", 4},
-            {"cagedb", 0},
-            {"ab", 1}
-        };
 
         public HashSet<char> StrToH(string s)
         {
@@ -63,7 +38,7 @@ namespace AdventOfCode._2021
         }
 
 
-        private HashSet<char>[] known = new HashSet<char>[10];
+        private HashSet<char>[] known;
         public void Decode(string s)
         {
             var h = StrToH(s);
@@ -116,7 +91,6 @@ namespace AdventOfCode._2021
                 if (IsSame(h, known[i]))
                     return i;
             }
-
             return -1;
         }
         
@@ -138,8 +112,7 @@ namespace AdventOfCode._2021
                 inp.Where(x => x.Length == 6).ToList().ForEach(x => Decode(x));
                 inp.Where(x => x.Length == 5).ToList().ForEach(x => Decode(x));
                 
-            
-            
+                
                 var line = input[i].Split(new char[]{' '}, StringSplitOptions.RemoveEmptyEntries);
                 int num = 0;
                 int o = 1000;
@@ -147,7 +120,6 @@ namespace AdventOfCode._2021
                 {
                     num += o * GetVal(line[j]);
                     o /= 10;
-
                 }
                 output += num;
             }
