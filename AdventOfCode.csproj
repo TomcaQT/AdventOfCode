@@ -52,6 +52,7 @@
         <Compile Include="src\2021\Day6.cs" />
         <Compile Include="src\2021\Day7.cs" />
         <Compile Include="src\2021\Day8.cs" />
+        <Compile Include="src\2021\Day9.cs" />
         <Compile Include="src\Program.cs" />
         <Compile Include="src\Utilities\BaseDay.cs" />
         <Compile Include="src\Utilities\c.cs" />
