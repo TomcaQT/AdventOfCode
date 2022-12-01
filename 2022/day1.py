@@ -5,22 +5,21 @@ import utils
 
 
 def solve_part_1(data):
-    x = 0
-    return x
+    return data[0]
 
 
 def solve_part_2(data):
-    x = 0
-    return x
+    return sum(data[:3])
 
 
-def parse_raw_input(raw_data):
-    #data = utils.list_t_in(raw_data)
-    data = raw_data
+def parse_raw_input(infile: str):
+    lines, raw_data = [], None
+    with open(infile, 'r') as f:
+        raw_data = f.read().split('\n\n')
+    data = sorted([sum([int(cal)for cal in elf.split('\n')]) for elf in raw_data], reverse=True)
     return data
 
-
-def solve(raw_data: []):
-    data = parse_raw_input(raw_data)
+def solve(infile):
+    data = parse_raw_input(infile)
     print(solve_part_1(data))
     print(solve_part_2(data))
