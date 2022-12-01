@@ -1,19 +1,11 @@
 import datetime
 import os
-import day1
-
-
-
-def read_input(day: str):
-    lines = []
-    with open(f'inputs/{day}') as file:
-        lines = file.readlines()
-    return lines
+import day2
 
 
 def main():
-    data = read_input(str(datetime.date.today().day) )
-    day1.solve(data)
+    day = str(datetime.date.today().day)
+    day2.solve(f'inputs/{day}')
 
 
 if __name__ == '__main__':
