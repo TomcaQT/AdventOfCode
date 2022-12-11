@@ -1,11 +1,11 @@
 import datetime
 import os
-import day11
+import day12
 
 
 def main():
     day = str(datetime.date.today().day)
-    day11.solve(f'inputs/{day}')
+    day12.solve(f'inputs/{day}')
 
 
 if __name__ == '__main__':
