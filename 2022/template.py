@@ -17,7 +17,7 @@ def parse_raw_input(infile):
     # lines = file.readlines()
     with open(infile, 'r') as f:
         raw_data = f.read().split('\n\n')
-    return data
+    return raw_data
 
 
 def solve(infile):
