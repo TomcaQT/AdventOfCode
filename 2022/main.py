@@ -1,14 +1,14 @@
 import datetime
 import os
-import day15
+import day16
 
 
 def main():
     day = str(datetime.date.today().day)
     print('Testing values: ')
-    day15.solve(f'inputs/test', 10, 20)
+    day16.solve(f'inputs/test')
     print('My values: ')
-    day15.solve(f'inputs/{day}', 2000000, 4000000)
+    day16.solve(f'inputs/{day}')
 
 
 if __name__ == '__main__':
